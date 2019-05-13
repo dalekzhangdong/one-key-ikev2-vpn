@@ -213,7 +213,7 @@ function pre_install(){
 # Download strongswan
 function download_files(){
     strongswan_version='strongswan-5.7.2'
-    strongswan_file="$strongswan_version.tar.bz2"
+    strongswan_file="$strongswan_version.tar.gz"
     if [ -f $strongswan_file ];then
         echo -e "$strongswan_file [$(__green "found")]"
     else
@@ -222,7 +222,7 @@ function download_files(){
             exit 1
         fi
     fi
-    tar vxjf $strongswan_file
+    tar xzf $strongswan_file
     if [ $? -eq 0 ];then
         cd $cur_dir/$strongswan_version/
     else
