@@ -239,14 +239,16 @@ function setup_strongswan(){
 --enable-eap-mschapv2 --enable-eap-tls --enable-eap-ttls --enable-eap-peap  \
 --enable-eap-tnc --enable-eap-dynamic --enable-eap-radius --enable-xauth-eap  \
 --enable-xauth-pam  --enable-dhcp  --enable-openssl  --enable-addrblock --enable-unity  \
---enable-certexpire --enable-radattr --enable-swanctl --enable-openssl --disable-gmp
+--enable-certexpire --enable-radattr --enable-swanctl --enable-openssl --disable-gmp \
+--enable-duplicheck
 
     else
         ./configure  --enable-eap-identity --enable-eap-md5 \
 --enable-eap-mschapv2 --enable-eap-tls --enable-eap-ttls --enable-eap-peap  \
 --enable-eap-tnc --enable-eap-dynamic --enable-eap-radius --enable-xauth-eap  \
 --enable-xauth-pam  --enable-dhcp  --enable-openssl  --enable-addrblock --enable-unity  \
---enable-certexpire --enable-radattr --enable-swanctl --enable-openssl --disable-gmp --enable-kernel-libipsec
+--enable-certexpire --enable-radattr --enable-swanctl --enable-openssl --disable-gmp \
+--enable-kernel-libipsec --enable-duplicheck
 
     fi
     make; make install
